@@ -1,0 +1,10 @@
+Instruction for Dr Keadle or whoever is next for the Step Study:
+
+the step_feature_aggregation.ipynb notebook is the notebook for taking the raw data and turning it into model usable.
+
+The first thing is to make sure all of the file locations for the raw data are correct. All of the chest and thigh data is written out because there was no discernable pattern to me in order to do a glob(). Hip and wrist were easier and I was able to glob() them. 
+The chest and thigh data had a timestamp so I only had to group by the timestamp which was nice. If you have another sensor in which the raw data has timestamps, chest_thigh_extraction() is the function to use.
+The hip and wrist data didn't have a timestamp so everything is divided by eighty to get the per second data. If a new sensor matches this format use hip_wrist_extraction().
+The other functions in the data aggregation parts are helper functions to make the notebook easier to read. I do not see a reason why you would need to directly call them.
+The log aggregation functions should work with the logs that Dr Keadle provides. First run get_simple_encoding_type and then run that output through length_of_exercise. These functions recode some of the classifications and extend the log in order to make a merge with the raw data cleaner.
+Lastly run combine_log_and_data() with the output from either of the extraction functions and the output of length_of_exercise function. The output should be the data you are interested in. Just replace my folder location with your own to control where the output goes.
