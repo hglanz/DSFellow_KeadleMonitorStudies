@@ -47,9 +47,9 @@ Original Repository: https://github.com/jlangston99/KPHMonitor
 
 Practice - Experimentation with Hidden Markov Models using practice data. This folder provides some insight into the early stages of the project, but it is unrelated to any work conducted on the heart monitor data itself.
 
-## Files:
+### Files:
 
-### All files with the .ipynb extention should be run in the following order:
+#### All files with the .ipynb extention should be run in the following order:
 
 If your are running any of these packages for the first time (pandas, glob, etc.) then run this line for each package that has never been used before:
 pip install [library] (i.e. pip install pandas)
